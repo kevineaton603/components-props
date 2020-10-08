@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import data from './data/data';
 
 function App() {
+  const [users] = useState(data());
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <div className="all-users-container">
+          {users.map((user => (
+            <div>
+              <div>Name: {user.name}</div>
+              <div>Email: {user.email}</div>
+              <div>Created At: {user.createdAt.toDateString()}</div>
+              <div>Updated At: {user.updatedAt.toDateString()}</div>
+              <br/>
+            </div>
+          )))}
+        </div>
+        <div className="recent-users-container">
+
+        </div>
+        <div className="past-users-container">
+
+        </div>
+      </div>
     </div>
   );
 }

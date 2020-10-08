@@ -19,10 +19,8 @@ function App() {
           )))}
         </div>
         <div className="recent-users-container">
-
         </div>
         <div className="past-users-container">
-
         </div>
       </div>
     </div>

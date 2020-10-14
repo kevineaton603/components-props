@@ -1,4 +1,3 @@
-import moment from 'moment';
 import React from 'react';
 import IUserModel from '../models/UserModel';
 import UserComponent from './user';
